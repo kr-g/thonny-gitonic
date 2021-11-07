@@ -6,6 +6,8 @@
 
 open `gitonic` in thonny by pressing Control+Shift+g, or via tools menu
 
+press `ESC` key to minimize gitonic window.
+
 
 # what's new ?
 
