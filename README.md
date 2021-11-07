@@ -33,5 +33,5 @@ tested on python3, and linux
 
 # license
 
-gitonic is released under the following
+thonny-gitonic is released under the following
 [`LICENSE`](https://github.com/kr-g/thonny-gitonic/blob/main/LICENSE.md)
