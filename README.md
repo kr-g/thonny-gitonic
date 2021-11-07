@@ -4,6 +4,8 @@
 
 [thonny](https://thonny.org) plugin for [gitonic](https://github.com/kr-g/gitonic)
 
+open `gitonic` in thonny by pressing Control+Shift+g, or via tools menu
+
 
 # what's new ?
 
