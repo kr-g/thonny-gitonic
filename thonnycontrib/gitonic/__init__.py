@@ -32,4 +32,4 @@ def load_plugin():
         )
     except Exception as ex:
         print(ex)
-        messagebox.showerror("internal error", "could not start gitonic plugin<")
+        messagebox.showerror("internal error", "could not start gitonic plugin")
