@@ -28,6 +28,10 @@ file = os.path.join("thonnycontrib", "gitonic", "__init__.py")
 version = find_version(file)
 projectname = find_projectname()
 
+
+packages = setuptools.find_packages()
+print(packages)
+
 setuptools.setup(
     name=projectname,
     version=version,
@@ -37,12 +41,12 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url=f"https://github.com/kr-g/{projectname}",
-    packages=setuptools.find_packages(),
+    packages=packages,
     license="MIT",
     keywords="python utility shell git git-workspace tkinter thonny",
     install_requires=[
         "gitonic",
-        "thonny >= 3.0.0",
+        "thonny >= 3.3.0",
     ],
     classifiers=[
         "Development Status :: 3 - Alpha",
@@ -59,4 +63,5 @@ setuptools.setup(
 )
 
 # python3 -m setup sdist build bdist_wheel
+# twine upload --repository testpypi dist/*
 # twine upload dist/*
