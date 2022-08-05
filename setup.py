@@ -42,7 +42,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url=f"https://github.com/kr-g/{projectname}",
     packages=packages,
-    license="MIT",
+    license="AGPLv3+",
     keywords="python utility shell git git-workspace tkinter thonny",
     install_requires=[
         "gitonic",
