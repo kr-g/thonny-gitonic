@@ -38,7 +38,7 @@ def open_gitonic():
     try:
         # this will log to the same console like thonny
         # todo
-        print("running",fnam)
+        print("running", fnam)
         os.system(fnam)
         # subprocess.Popen(["gitonic"],creationflags=0)
     except Exception as ex:

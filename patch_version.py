@@ -1,4 +1,3 @@
-import os
 import re
 from thonnycontrib.gitonic import VERSION
 
