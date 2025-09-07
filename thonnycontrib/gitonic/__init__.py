@@ -4,7 +4,7 @@ from tkinter import messagebox
 import os
 import configparser
 
-VERSION = "v0.0.3-a"
+VERSION = "v0.0.3-develop"
 
 # import subprocess
 
