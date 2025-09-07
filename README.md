@@ -33,6 +33,22 @@ tested on python3, and linux
     python3 -m pip install thonny-gitonic
 
 
+# configuration
+
+## custom installation path
+
+in file `~/.gitonic/thonnycontrib.cfg` 
+
+    [DEFAULT]
+    # will run gitonic from local installation 
+    path = .
+
+    [DEFAULT]
+    # will run gitonic from specific .venv installation 
+    path = ~/gitonic/.venv/bin
+
+
+
 # license
 
 thonny-gitonic is released under the following
