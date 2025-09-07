@@ -30,7 +30,7 @@ tested on python3, and linux
 
 # installation
 
-    phyton3 -m pip install thonny-gitonic
+    python3 -m pip install thonny-gitonic
 
 
 # license
