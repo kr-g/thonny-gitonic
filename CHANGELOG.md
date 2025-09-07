@@ -4,6 +4,7 @@
 
 ## next version v0.0.3 - ???
 
+- fix typo #2
 - custom `gitonic` path -> file `~/.gitonic/thonnycontrib.cfg` 
 - 
 
