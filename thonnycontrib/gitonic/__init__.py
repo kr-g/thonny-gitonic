@@ -1,8 +1,13 @@
-from thonny.ui_utils import select_sequence
-from thonny import get_workbench
+try:
+    from thonny.ui_utils import select_sequence
+    from thonny import get_workbench
+except:
+    pass
+
 from tkinter import messagebox
 import os
 import configparser
+import shlex
 
 VERSION = "v0.0.3-develop"
 
@@ -11,7 +16,8 @@ VERSION = "v0.0.3-develop"
 
 def open_config():
     cfg = configparser.ConfigParser(allow_no_value=True)
-    cfg.read_dict({"DEFAULT": {"path": "."}})
+    cfg.read_dict(
+        {"DEFAULT": {"path": "", "start": "gitonic", "param": ""}})
 
     fnam = os.path.join("~", ".gitonic", "thonnycontrib.cfg")
     fnam = os.path.expanduser(fnam)
@@ -25,21 +31,45 @@ def open_config():
     return cfg
 
 
-def open_gitonic():
+def get_args():
 
     cfg = open_config()
-    fp = cfg["DEFAULT"]["path"]
 
-    fp = os.path.join(fp, "gitonic")
-    fp = os.path.expanduser(fp)
+    proc = cfg["DEFAULT"]["path"].strip()
+    proc = os.path.expanduser(proc)
+    if (proc == "."):
+        proc = ""
 
-    fnam = fp + " &"
+    cmd = cfg["DEFAULT"]["start"].strip()
+    cmd = os.path.expanduser(cmd)
+
+    if (len(proc) > 0):
+        cmd = os.path.join(proc, cmd)
+
+    para = cfg["DEFAULT"]["param"].strip()
+    para = os.path.expanduser(para)
+
+    cmdline = " ".join([cmd, para])
+
+    args = shlex.split(cmdline)
+    return args
+
+
+def open_gitonic():
+
+    args = get_args()
 
     try:
         # this will log to the same console like thonny
         # todo
-        print("running", fnam)
-        os.system(fnam)
+        print("pwd", os.path.abspath(os.curdir))
+        print("running", args)
+
+        # todo
+        import subprocess
+        rc = subprocess.Popen(args)
+        print("started", rc)
+
         # subprocess.Popen(["gitonic"],creationflags=0)
     except Exception as ex:
         messagebox.showerror(
@@ -59,3 +89,9 @@ def load_plugin():
         print(ex)
         messagebox.showerror(
             "internal error", "could not start gitonic plugin")
+
+
+if __name__ == "__main__":
+    args = get_args()
+    print(args)
+    open_gitonic()

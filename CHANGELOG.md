@@ -6,6 +6,7 @@
 
 - fix typo #2
 - custom `gitonic` path -> file `~/.gitonic/thonnycontrib.cfg` 
+- changed to subprocess implementation
 - 
 
 
