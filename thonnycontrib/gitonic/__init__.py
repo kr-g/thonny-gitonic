@@ -94,4 +94,4 @@ def load_plugin():
 if __name__ == "__main__":
     args = get_args()
     print(args)
-    open_gitonic()
+    # open_gitonic()
