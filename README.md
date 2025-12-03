@@ -53,6 +53,13 @@ or, in case of a venv
     # will run gitonic from specific .venv installation 
     path = ~/gitonic/.venv/bin
 
+or, as python parameter (depending on your environment)
+
+    [DEFAULT]
+    path = ~/repo/gitonic
+    start = .venv/bin/python3 
+    param = ~/repo/gitonic/gitonic/gitonic.py
+
 on windows this might look like this (depending on your environment)
 
     [DEFAULT]
