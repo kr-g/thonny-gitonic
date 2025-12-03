@@ -47,10 +47,24 @@ in file `~/.gitonic/thonnycontrib.cfg`
     # will run gitonic from local installation 
     path = .
 
+or, in case of a venv
+
     [DEFAULT]
     # will run gitonic from specific .venv installation 
     path = ~/gitonic/.venv/bin
 
+on windows this might look like this (depending on your environment)
+
+    [DEFAULT]
+    path = ~/repo/gitonic
+    start = .venv/Scripts/gitonic
+
+or, if started as python cmdline parameter
+
+    [DEFAULT]
+    path = ~/repo/gitonic
+    start = .venv/Scripts/python
+    param = ~/repo/gitonic/gitonic/gitonic.py
 
 
 # license
