@@ -62,6 +62,16 @@ setuptools.setup(
     python_requires=">=3.8",
 )
 
-# python3 -m setup sdist build bdist_wheel
+# !!!
+# python3 patch_version.py
+# !!!
+
+# !!!deprecated!!! python3 -m setup sdist build bdist_wheel
+# python3 -m setup build bdist_wheel
+
 # twine upload --repository testpypi dist/*
+
+# python3 -m pip install --index-url https://test.pypi.org/simple/ thonny_gitonic --extra-index-url https://pypi.org/simple/
+# python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps thonny_gitonic
+
 # twine upload dist/*

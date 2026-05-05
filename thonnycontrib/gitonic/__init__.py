@@ -11,7 +11,7 @@ import sys
 import configparser
 import shlex
 
-VERSION = "v0.0.3-develop"
+VERSION = "v0.3.0"
 
 showmsg = True
 
