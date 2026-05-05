@@ -71,7 +71,7 @@ setuptools.setup(
 
 # twine upload --repository testpypi dist/*
 
-# python3 -m pip install --index-url https://test.pypi.org/simple/ thonny_gitonic --extra-index-url https://pypi.org/simple/
-# python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps thonny_gitonic
+# python3 -m pip install --index-url https://test.pypi.org/simple/ thonny-gitonic --extra-index-url https://pypi.org/simple/
+# python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps thonny-gitonic
 
 # twine upload dist/*
